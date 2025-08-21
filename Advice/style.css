@@ -1,0 +1,80 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box; /* Changed from 0 to border-box */
+}
+
+body {
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope', Arial, sans-serif; /* Added better font stack */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Better centering */
+    padding: 20px;
+}
+
+.advice {
+    text-align: center;
+    background-color: hsl(217, 19%, 24%);
+    max-width: 1440px; /* More reasonable max-width */
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto; /* Better centering */
+}
+
+.topic {
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.content {
+    color: hsl(193, 38%, 86%);
+    font-size: 19px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+.image-1 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.fetchAdvice {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(150, 100%, 66%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.fetchAdvice:hover {
+    box-shadow: 0 0 20px hsl(150, 100%, 66%);
+}
+
+@media (max-width: 768px) {
+    .advice {
+        max-width: 375px;
+        padding: 30px 20px;
+    }
+    
+    .content {
+        font-size: 19px;
+    }
+}
+
+
