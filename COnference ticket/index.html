@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Ticket Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+
+
+    <form action="" class="main" id="ticketForm">
+        <img src="./images/logo-full.svg" alt="logo" class="begin">
+
+        <h1 class="second">Your Journey to Coding Conf<br>2025 Starts Here!</h1>
+        <p class="third">Secure your spot at next year's biggest coding conference.</p>
+        <div class="main-upload">
+            <p class="upload-1">Drag and drop or click to upload </p>
+            <p class="upload-2">Upload your photo (JPG or PNG, max size: 500KB).</p>
+            <label class="avatar" for="fileInput">Upload Avatar</label> <br>
+            <input type="file" id="fileInput" class="file-input" accept="image/jpeg, image/png" required><br>
+            <img class="upload" src="./images/icon-upload.svg" alt="">
+            <img class="info" src="./images/icon-info.svg" alt="">
+            <p class="error-message" id="fileError"></p>
+        </div>
+        <label class="name" for="fullname">Full Name</label><br>
+        <input class="ten1" type="text" id="fullname" placeholder="Enter Your Full Name" required> <br>
+        <p class="error-message" id="nameError"></p>
+        
+        <label class="mail" for="Email">Email Address</label> <br>
+        <input class="ten2" type="email" id="Email" placeholder="example@gmail.com" required><br>
+        <p class="error-message" id="emailError"></p>
+        
+        <label class="hub" for="username">Github Username</label> <br>
+        <input class="ten3" type="text" id="username" placeholder="@yourusername" required> <br>
+        <p class="error-message" id="usernameError"></p>
+
+        <button class="submit" type="submit">Generate My Ticket</button>
+    </form>
+
+    <div class="ready" id="ticketContainer">
+        <img src="./images/logo-full.svg" alt="logo" class="begin">
+        <h1 class="second1">Congrats, <span id="ticketName">Jonatan Kristof!</span> <br>Your ticket is ready.</h1>
+        <p class="third">We've emailed your ticket to<br><span id="ticketEmail">jonatan@email.com</span> and will send updates in <br> the run up to the event.</p>
+
+        <div class="ticket-design">
+            <img class="container1" src="./images/pattern-ticket.svg" alt="">
+            <img class="container2" src="./images/logo-mark.svg" alt="logo">
+            <p class="describe-logo">Coding Conf</p>
+            <label class="date">Jan 31, 2025 / Austin, TX</label>
+
+            <img class="container3" id="ticketAvatar" src="./images/image-avatar.jpg" alt="Profile picture">
+            <p class="identity" id="ticketUserName">Jonatan Kristof</p>
+            <p class="last1" id="ticketGithub">@jonatankristof0101</p> 
+            <img class="last-pic" src="./images/icon-github.svg" alt="">
+            <p class="last0" id="ticketNumber">#01609</p>
+        </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+        
+</body>
+</html>
+

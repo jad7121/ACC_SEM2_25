@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-image:
+    url(images/pattern-circle.svg),
+    url(images/pattern-squiggly-line-top.svg) ,
+    url(images/pattern-lines.svg),             
+    url(images/pattern-squiggly-line-bottom-desktop.svg),
+    url(images/background-desktop.png); 
+
+  background-repeat: no-repeat;
+  /* Position and size each image (order matches above) */
+  background-position:
+    left top,
+    right top,
+    top ,
+    left bottom,
+    center center;
+
+  background-size:
+    auto,
+    auto,                /* Lines: natural size */
+    auto,                /* Bottom squiggly: natural size */
+    auto,                /* Top squiggly: natural size */  
+    cover;               /* Main background: full cover */
+    
+                                  
+
+  /* Optional: Fix the main background while scrolling */
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: block;
+  
+  
+  
+}
+.begin {
+    width: 200px;
+    position: relative;
+    bottom: 20px;
+}
+
+.second {
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.third {
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+    color: hsl(252, 6%, 83%);
+    bottom: 10px;
+    letter-spacing: 2px;
+    right: 58px;
+}
+
+.main {
+    position: relative;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 400px;
+    left: 490px;
+    
+
+}
+
+.main-upload {
+    border: 2px dashed hsl(252, 6%, 83%);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 340px;
+    right: 10px;
+    top: 50px;
+    background-color: hsla(245, 19%, 35%, 0.185);
+    
+}
+
+.main-upload.drag-over {
+    border-color: hsl(7, 88%, 67%);
+    background: hsla(247, 50%, 27%, 0.8);
+}
+
+#fileInput {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.upload-1 {
+    position: relative;
+    color: hsla(252, 6%, 83%, 0.911);
+    top: 70px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.upload-2 {
+    position: relative;
+    font-size: 10px;
+    top: 88px;
+    right: 25px;
+    color: hsl(252, 6%, 83%);
+    letter-spacing: 1px;
+}
+
+.avatar {
+    position: relative;
+    color: white;
+    bottom: 60px;
+    cursor: pointer;
+    right: 120px;
+    
+}
+
+.info {
+    position: relative;
+    top: 25px;
+    right: 180px;
+
+}
+.upload{
+    position: relative;
+    bottom: 45px;
+    background-color: hsl(245, 19%, 35%);
+    border-radius: 10px;
+
+}
+
+.name, .mail, .hub {
+    position: relative;
+    right: 135px;
+    top: 55px;
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.ten1, .ten2, .ten3 {
+    position: relative;
+    width: 100%;
+    padding: 0.6rem;
+    right: 11px;
+    background: hsla(245, 19%, 35%, 0.199);
+    border: 1px solid hsl(252, 6%, 83%);
+    border-radius: 10px;
+    color: white;
+    top: 40px;
+}
+
+.submit {
+    position: relative;
+    top: 60px;
+    right: 12px;
+    width: 100%;
+    padding: 0.6rem;
+    background: hsl(7, 88%, 67%);
+    color: rgb(10, 9, 9);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 700;
+}
+
+.submit:hover {
+    background: hsl(0, 2%, 89%);
+}
+
+.error-message {
+    color: hsl(7, 88%, 67%);
+    font-size: 0.75rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.ready {
+    padding: 2rem;
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    overflow: hidden;
+    display: none;
+    left: 420px;
+    
+}
+
+.second1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    color: white;
+}
+
+.second1 span {
+    color: hsl(7, 88%, 67%);
+}
+
+.third{
+    position: relative;
+    left: -22px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+.third span{
+    position: relative;
+    color: hsl(7, 88%, 67%);
+
+}
+
+
+
+.ticket-design {
+    position: relative;
+    margin-top: 2rem;
+    padding: 2rem;
+    
+}
+
+.container1 {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.container2 {
+    width: 30px;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    bottom: 170px;
+    right: 165px;
+}
+
+.describe-logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-weight: 600;
+    bottom: 220px;
+    font-size: 25px;
+    right: 70px;
+}
+
+.date {
+    color: hsla(252, 6%, 83%, 0.61);
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    display: block;
+    position: relative;
+    z-index: 2;
+    bottom: 218px;
+    right: 70px;
+}
+
+.container3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    bottom: 206px;
+    right: 155px;
+}
+
+.identity {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    bottom: 280px;
+    color: rgba(255, 255, 255, 0.87);
+    right: 58px;
+}
+
+.last1 {
+    color: hsla(252, 6%, 83%, 0.863);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    bottom: 280px;
+    right: 65px;
+}
+
+.last-pic {
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    position: relative;
+    z-index: 2;
+    bottom: 307px;
+    right: 103px;
+}
+
+.last0 {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    color: hsla(252, 6%, 83%, 0.849);
+    font-weight: 600;
+    letter-spacing: 2px;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+    z-index: 2;
+    bottom: 380px;
+    right: 80px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image:
+        url(images/pattern-circle.svg),
+        url(images/pattern-squiggly-line-top.svg) ,
+        url(images/pattern-lines.svg),             
+        url(images/pattern-squiggly-line-bottom-desktop.svg),
+        url(images/background-desktop.png); 
+
+        background-repeat: no-repeat;
+        /* Position and size each image (order matches above) */
+        background-position:
+        left top,
+        right top,
+        top ,
+        left bottom,
+        center center;
+
+        background-size:
+        auto,
+        auto,                /* Lines: natural size */
+        auto,                /* Bottom squiggly: natural size */
+        auto,                /* Top squiggly: natural size */  
+        cover;               /* Main background: full cover */
+    
+                                  
+
+        /* Optional: Fix the main background while scrolling */
+       background-attachment: fixed;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       max-width: 375px;
+       
+       margin: 0 auto;
+       padding: 0 auto;
+       
+  
+  
+  
+    }
+    .main {
+        position: static;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        left: auto;
+    }
+
+
+    .third {
+        right: auto;
+        white-space: normal;
+        margin-bottom: 2rem;
+    }
+
+    .avatar{
+        position: relative;
+        bottom: 90px;
+        
+    }
+    .info{
+        position: relative;
+        left: -163px;
+    }
+    .upload-2{
+        position: relative;
+        left: 1px;
+    }
+    .name{
+        position: relative;
+        right: 160px;
+
+    }
+    .mail{
+        position: relative;
+        right: 148px;
+
+    }
+
+    .hub {
+        position: relative;
+        text-align: center;
+        
+    }
+
+    .ready {
+        position: static;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        left: auto;
+        
+    }
+    .container1{
+        width: 330px;
+    }
+
+    .container2{
+        position: relative;
+        left: -130px;
+        top: -160px;
+    }
+    .describe-logo{
+        position: relative;
+        left: -35px;
+        top: -207px;
+        font-size: 25px;
+    }
+    .date{
+        position: relative;
+        top: -210px;
+        right: 35px;
+    }
+    .container3{
+        position: relative;
+        left: -115px;
+        top: -220px;
+    }
+
+    .identity{
+        position: relative;
+        left: -20px;
+        top: -290px;
+    }
+    .last1{
+        position: relative;
+        left: -25px;
+        bottom: 290px;
+    }
+
+    .last-pic{
+        position: relative;
+        left: -66px;
+        top: -316px;
+    }
+
+
+    .second1{
+    
+        position: static;
+        text-align: center;
+        margin: 0.5rem auto;
+        transform: none;
+    }
+
+    .container2, .container3 {
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .last0 {
+        position: relative;
+        transform: rotate(90deg);
+        top: -235px;
+        right: 25px;
+        
+    }
+
+    .ticket-design {
+        padding: 1rem;
+    }
+    .third {
+        position: relative;
+        left: 20px;
+        font-size: 0.9rem;
+        
+    }
+ 
+}
+
+
